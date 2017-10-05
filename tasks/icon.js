@@ -4,7 +4,7 @@ import imagemin from 'gulp-imagemin';
 import {paths} from './config';
 import {production} from 'gulp-environments';
 
-export const iconify = () => gulp.src(paths.masterIcon)
+const iconify = () => gulp.src(paths.masterIcon)
     .pipe(chromeManifestIconify({
         manifest: paths.manifest,
         resizeMode: chromeManifestIconify.ResizeMode.HERMITE
@@ -12,5 +12,7 @@ export const iconify = () => gulp.src(paths.masterIcon)
     .pipe(production(imagemin()))
     .pipe(gulp.dest(paths.build));
 
-export const watchIcon = (watchOptions) =>
+const watchIcon = (watchOptions) =>
     gulp.watch([paths.manifest, paths.masterIcon], watchOptions, iconify);
+
+export {iconify, watchIcon};

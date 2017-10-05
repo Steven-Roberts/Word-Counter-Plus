@@ -7,7 +7,7 @@ import gulpIf from 'gulp-if';
 import {production} from 'gulp-environments';
 import uglify from 'gulp-uglify';
 
-export const createLintJs = (failAfterError = true) => {
+const createLintJs = (failAfterError = true) => {
     const lintJs = () => gulp.src([...globs.js, ...globs.gulp])
         .pipe(eslint())
         .pipe(eslint.format())
@@ -16,7 +16,7 @@ export const createLintJs = (failAfterError = true) => {
     return lintJs;
 };
 
-export const buildJs = () => gulp.src(globs.js)
+const buildJs = () => gulp.src(globs.js)
     .pipe(babel({
         presets: [
             [
@@ -30,5 +30,7 @@ export const buildJs = () => gulp.src(globs.js)
     .pipe(production(uglify()))
     .pipe(gulp.dest(paths.build));
 
-export const watchJs = (watchOptions) => gulp.watch(globs.js, watchOptions,
+const watchJs = (watchOptions) => gulp.watch(globs.js, watchOptions,
     gulp.series(createLintJs(false), buildJs));
+
+export {createLintJs, buildJs, watchJs};
