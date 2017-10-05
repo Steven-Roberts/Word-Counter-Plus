@@ -1,4 +1,4 @@
-import {globs, paths} from './config';
+import {browserlistOptions, globs, paths} from './config';
 
 import babel from 'gulp-babel';
 import eslint from 'gulp-eslint';
@@ -17,7 +17,16 @@ export const createLintJs = (failAfterError = true) => {
 };
 
 export const buildJs = () => gulp.src(globs.js)
-    .pipe(babel())
+    .pipe(babel({
+        presets: [
+            [
+                'env',
+                {
+                    targets: browserlistOptions
+                }
+            ]
+        ]
+    }))
     .pipe(production(uglify()))
     .pipe(gulp.dest(paths.build));
 
