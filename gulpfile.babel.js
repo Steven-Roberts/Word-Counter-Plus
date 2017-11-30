@@ -8,7 +8,7 @@ import del from 'del';
 import gulp from 'gulp';
 import {join} from 'path';
 import manifest from './src/manifest';
-import util from 'util';
+import {promisify} from 'util';
 import zipper from 'gulp-zip';
 
 const zipFileName = `${manifest.name} ${manifest.version}.zip`;
@@ -20,8 +20,7 @@ const lint = createLintJs();
 const build = gulp.series(clean, lint,
     gulp.parallel(iconify, buildJs, buildJson));
 
-const checkVersion = () => util
-    .promisify(access)(join(paths.release, zipFileName))
+const checkVersion = () => promisify(access)(join(paths.release, zipFileName))
     .then(() => {
         throw new Error(`There is already a release "${zipFileName}"`);
     },

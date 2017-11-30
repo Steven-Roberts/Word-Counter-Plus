@@ -4,7 +4,7 @@
 [![Chrome Web Store](https://img.shields.io/chrome-web-store/stars/fpjegfbcdijjfkceenlfoehpcakfgldj.svg)](https://chrome.google.com/webstore/detail/fpjegfbcdijjfkceenlfoehpcakfgldj/reviews)
 [![devDependencies Status](https://david-dm.org/Steven-Roberts/Word-Counter-Plus/dev-status.svg)](https://david-dm.org/Steven-Roberts/Word-Counter-Plus?type=dev)
 [![Build Status](https://travis-ci.org/Steven-Roberts/Word-Counter-Plus.svg?branch=master)](https://travis-ci.org/Steven-Roberts/Word-Counter-Plus)
-[![Code Climate](https://codeclimate.com/github/Steven-Roberts/Word-Counter-Plus/badges/gpa.svg)](https://codeclimate.com/github/Steven-Roberts/Word-Counter-Plus)
+[![Maintainability](https://api.codeclimate.com/v1/badges/344cd39bb99963035c3f/maintainability)](https://codeclimate.com/github/Steven-Roberts/Word-Counter-Plus/maintainability)
 
 Word Counter Plus is a simple and useful tool that lets you views stats on
 selected text. Simply highlight some text on a webpage, right click on it, and

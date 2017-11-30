@@ -9,7 +9,7 @@
     "url": "https://github.com/Steven-Roberts/Word-Counter-Plus/issues"
   },
   "devDependencies": {
-    "babel-preset-env": "^1.6.0",
+    "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "del": "^3.0.0",
     "eslint-config-steven-roberts": "github:steven-roberts/eslint-config",
@@ -19,7 +19,7 @@
     "gulp-environments": "^0.1.1",
     "gulp-eslint": "^4.0.0",
     "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^3.1.1",
+    "gulp-imagemin": "^4.0.0",
     "gulp-jsonminify": "^1.0.0",
     "gulp-uglify": "^3.0.0",
     "gulp-zip": "^4.0.0"
